@@ -105,13 +105,13 @@
     <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20 transition-all duration-300" id="header-container">
         
         <!-- Logo -->
-        <div class="flex items-center gap-stack-md">
-            <img alt="Logo GRADEL PRINT" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLz9UdDY68SPzJiFwgPPVF59cNRbwcz0hYDnBKXuYCeiclRTEpK_ggmTxaL-LYFokzhKvWArZL_uLrpn5Kj1501rqSj7VfChvDBsGzUe-K28qsgAjA3IyG8qUzgUcdXYgH5-ExXwlZm4WC8BxK0-CbMmsxlvHRE74YUI9ur3Uy3zrMXHLfVv93RhOfjuelrCnMNQUgszW7jvQnbFRf5Q0ZNHp5-lPYqKpFWibfykZQMt6L8mh-su3ZgRan16yGGMmdbZU"/>
-            <span class="font-headline-sm text-headline-sm font-bold tracking-tighter text-primary">GRADEL PRINT</span>
+        <div class="flex items-center gap-2 sm:gap-stack-md z-50">
+            <img alt="Logo GRADEL PRINT" class="h-10 sm:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLz9UdDY68SPzJiFwgPPVF59cNRbwcz0hYDnBKXuYCeiclRTEpK_ggmTxaL-LYFokzhKvWArZL_uLrpn5Kj1501rqSj7VfChvDBsGzUe-K28qsgAjA3IyG8qUzgUcdXYgH5-ExXwlZm4WC8BxK0-CbMmsxlvHRE74YUI9ur3Uy3zrMXHLfVv93RhOfjuelrCnMNQUgszW7jvQnbFRf5Q0ZNHp5-lPYqKpFWibfykZQMt6L8mh-su3ZgRan16yGGMmdbZU"/>
+            <span class="font-headline-sm text-[20px] sm:text-headline-sm font-bold tracking-tighter text-primary">GRADEL PRINT</span>
         </div>
 
         <!-- Navigation Desktop -->
-        <nav class="hidden md:flex items-center gap-stack-lg">
+        <nav class="hidden md:flex items-center gap-4 lg:gap-stack-lg">
             <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-secondary transition-colors" href="#accueil">Accueil</a>
             <a class="text-on-surface-variant font-medium font-body-md hover:text-secondary transition-colors" href="#services">Services</a>
             <a class="text-on-surface-variant font-medium font-body-md hover:text-secondary transition-colors" href="#portfolio">Portfolio</a>
@@ -119,11 +119,11 @@
         </nav>
 
         <!-- Actions & Menu Mobile Button -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 sm:gap-4 z-50">
             <a class="hidden sm:flex p-2 text-primary hover:bg-primary-fixed rounded-full transition-all scale-95 active:scale-90" href="tel:+2430834989202">
                 <span class="material-symbols-outlined">call</span>
             </a>
-            <button class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary-container transition-all scale-95 active:scale-90" onclick="document.getElementById('contact').scrollIntoView();">
+            <button class="hidden lg:block bg-primary text-on-primary px-6 py-2.5 rounded font-label-lg text-label-lg font-bold uppercase tracking-wider hover:bg-primary-container transition-all scale-95 active:scale-90" onclick="document.getElementById('contact').scrollIntoView();">
                 Devis gratuit
             </button>
             <!-- Bouton Hamburger (Mobile) -->
@@ -133,86 +133,90 @@
         </div>
     </div>
 
-    <!-- Navigation Mobile (Cachée par défaut) -->
-    <div id="mobile-menu" class="hidden flex-col bg-surface-container-lowest border-t border-outline-variant md:hidden">
-        <a class="p-4 border-b border-outline-variant font-bold text-primary" href="#accueil" onclick="toggleMenu()">Accueil</a>
-        <a class="p-4 border-b border-outline-variant font-medium text-on-surface-variant" href="#services" onclick="toggleMenu()">Services</a>
-        <a class="p-4 border-b border-outline-variant font-medium text-on-surface-variant" href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-        <a class="p-4 font-medium text-on-surface-variant" href="#contact" onclick="toggleMenu()">Contact</a>
+    <!-- Navigation Mobile (Positionnée sous le header) -->
+    <div id="mobile-menu" class="hidden flex-col bg-surface-container-lowest border-b border-outline-variant md:hidden absolute top-full left-0 w-full shadow-lg">
+        <a class="p-4 border-b border-outline-variant font-bold text-primary hover:bg-surface-container-low" href="#accueil" onclick="toggleMenu()">Accueil</a>
+        <a class="p-4 border-b border-outline-variant font-medium text-on-surface-variant hover:bg-surface-container-low" href="#services" onclick="toggleMenu()">Services</a>
+        <a class="p-4 border-b border-outline-variant font-medium text-on-surface-variant hover:bg-surface-container-low" href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+        <a class="p-4 font-medium text-on-surface-variant hover:bg-surface-container-low" href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 </header>
 
 <main class="pt-20">
     <!-- Hero Section -->
-    <section class="relative min-h-[80vh] flex items-center py-section-padding overflow-hidden" id="accueil">
-        <div class="max-w-container-max mx-auto px-gutter w-full grid lg:grid-cols-2 gap-stack-lg items-center relative z-10">
-            <div class="space-y-stack-lg">
-                <div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full font-label-lg text-label-lg">
-                    <span class="material-symbols-outlined text-[18px]">verified</span>
+    <section class="relative min-h-[80vh] flex items-center py-12 md:py-section-padding overflow-hidden" id="accueil">
+        <div class="max-w-container-max mx-auto px-gutter w-full grid lg:grid-cols-2 gap-10 lg:gap-stack-lg items-center relative z-10">
+            <div class="space-y-6 md:space-y-stack-lg text-center lg:text-left flex flex-col items-center lg:items-start">
+                <div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full font-label-lg text-xs sm:text-label-lg">
+                    <span class="material-symbols-outlined text-[16px] sm:text-[18px]">verified</span>
                     EXCELLENCE EN IMPRESSION
                 </div>
-                <h1 class="font-display-lg text-display-lg text-on-surface max-w-xl">
+                <!-- Typographie ajustée pour mobile -->
+                <h1 class="font-display-lg text-4xl sm:text-5xl lg:text-[56px] text-on-surface max-w-xl leading-tight">
                     L'Art de la <span class="text-primary">Communication</span> Visuelle
                 </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-lg">
                     De Kinshasa au monde entier, nous transformons vos idées en supports tangibles et percutants. Précision, rapidité et qualité industrielle pour tous vos besoins publicitaires.
                 </p>
-                <div class="flex flex-wrap gap-stack-md">
-                    <a href="#portfolio" class="bg-primary text-on-primary px-8 py-4 rounded font-label-lg text-label-lg font-bold transition-transform hover:scale-105 active:scale-95 inline-block">NOS RÉALISATIONS</a>
-                    <a href="#contact" class="border-2 border-secondary text-secondary px-8 py-4 rounded font-label-lg text-label-lg font-bold transition-transform hover:scale-105 active:scale-95 inline-block">CONTACTER UN EXPERT</a>
+                <!-- Boutons ajustés en largeur pour mobile -->
+                <div class="flex flex-col sm:flex-row w-full sm:w-auto gap-4 sm:gap-stack-md mt-4">
+                    <a href="#portfolio" class="w-full sm:w-auto text-center bg-primary text-on-primary px-6 py-4 rounded font-label-lg text-sm sm:text-label-lg font-bold transition-transform hover:scale-105 active:scale-95 inline-block">NOS RÉALISATIONS</a>
+                    <a href="#contact" class="w-full sm:w-auto text-center border-2 border-secondary text-secondary px-6 py-4 rounded font-label-lg text-sm sm:text-label-lg font-bold transition-transform hover:scale-105 active:scale-95 inline-block">CONTACTER UN EXPERT</a>
                 </div>
             </div>
+            
             <div class="relative group mt-8 lg:mt-0">
                 <div class="absolute -inset-4 bg-secondary/10 rounded-xl blur-2xl group-hover:bg-primary/10 transition-colors"></div>
                 <div class="relative overflow-hidden rounded-xl shadow-xl border border-outline-variant">
-                    <img class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Machine d'impression industrielle en fonctionnement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa7QAVdATo5k77r7H8no1fqp6l258sEgliAPIvTjpHD9RyHl0t6_Y18rWU4DLjo3ppZJgKybe8hfavRtgihLetJ8vNZ_95WC94kGCxDWaUcvBbqzVfotwM2lDeDWpGI5Z03hj4pThIgBw2SV88eGb-AfmtdHQlrQXL0YySy-VJFMjt38HhYmwKT7WE_ULX0OMh4lsIFErofHmFoJiYzja6hlRTjW98kZ5FIYZdgKxVxiD-ja8A8YltKg"/>
+                    <!-- Hauteur de l'image réduite sur mobile -->
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Machine d'impression industrielle en fonctionnement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa7QAVdATo5k77r7H8no1fqp6l258sEgliAPIvTjpHD9RyHl0t6_Y18rWU4DLjo3ppZJgKybe8hfavRtgihLetJ8vNZ_95WC94kGCxDWaUcvBbqzVfotwM2lDeDWpGI5Z03hj4pThIgBw2SV88eGb-AfmtdHQlrQXL0YySy-VJFMjt38HhYmwKT7WE_ULX0OMh4lsIFErofHmFoJiYzja6hlRTjW98kZ5FIYZdgKxVxiD-ja8A8YltKg"/>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-section-padding bg-surface-container-low" id="services">
+    <section class="py-16 md:py-section-padding bg-surface-container-low" id="services">
         <div class="max-w-container-max mx-auto px-gutter">
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg space-y-stack-md">
-                <h2 class="font-headline-lg text-headline-lg text-on-surface">Nos Services Experts</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant">Une gamme complète de solutions d'impression pour sublimer votre identité de marque.</p>
+            <div class="text-center max-w-2xl mx-auto mb-10 md:mb-stack-lg space-y-4 md:space-y-stack-md">
+                <h2 class="font-headline-lg text-3xl md:text-[40px] text-on-surface">Nos Services Experts</h2>
+                <p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Une gamme complète de solutions d'impression pour sublimer votre identité de marque.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-gutter mt-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter mt-8 md:mt-12">
                 <!-- Service 1 -->
-                <div class="service-card bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
-                    <div class="service-icon w-16 h-16 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-stack-md transition-transform duration-300">
-                        <span class="material-symbols-outlined text-4xl">checkroom</span>
+                <div class="service-card bg-surface-container-lowest p-6 md:p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
+                    <div class="service-icon w-14 h-14 md:w-16 md:h-16 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-4 md:mb-stack-md transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl">checkroom</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg mb-stack-md">Impression Textile</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">T-shirts, polos, gilets de sécurité et uniformes personnalisés avec logos en haute définition.</p>
-                    <ul class="space-y-2 text-on-surface-variant">
+                    <h3 class="font-title-lg text-lg md:text-title-lg mb-2 md:mb-stack-md">Impression Textile</h3>
+                    <p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-6 md:mb-stack-lg">T-shirts, polos, gilets de sécurité et uniformes personnalisés avec logos en haute définition.</p>
+                    <ul class="space-y-2 text-on-surface-variant text-sm md:text-base">
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">done</span> Sérigraphie</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">done</span> Broderie Industrielle</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">done</span> Flocage Premium</li>
                     </ul>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
-                    <div class="service-icon w-16 h-16 bg-secondary-fixed rounded-xl flex items-center justify-center text-secondary mb-stack-md transition-transform duration-300">
-                        <span class="material-symbols-outlined text-4xl">imagesmode</span>
+                <div class="service-card bg-surface-container-lowest p-6 md:p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
+                    <div class="service-icon w-14 h-14 md:w-16 md:h-16 bg-secondary-fixed rounded-xl flex items-center justify-center text-secondary mb-4 md:mb-stack-md transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl">imagesmode</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg mb-stack-md">Grand Format</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Banderoles, kakemonos et affiches géantes pour une visibilité maximale en extérieur.</p>
-                    <ul class="space-y-2 text-on-surface-variant">
+                    <h3 class="font-title-lg text-lg md:text-title-lg mb-2 md:mb-stack-md">Grand Format</h3>
+                    <p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-6 md:mb-stack-lg">Banderoles, kakemonos et affiches géantes pour une visibilité maximale en extérieur.</p>
+                    <ul class="space-y-2 text-on-surface-variant text-sm md:text-base">
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">done</span> Bâches Publicitaires</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">done</span> Vinyle Adhésif</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">done</span> Habillage de Véhicules</li>
                     </ul>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
-                    <div class="service-icon w-16 h-16 bg-tertiary-fixed rounded-xl flex items-center justify-center text-tertiary mb-stack-md transition-transform duration-300">
-                        <span class="material-symbols-outlined text-4xl">inventory_2</span>
+                <div class="service-card bg-surface-container-lowest p-6 md:p-stack-lg rounded-xl border border-outline-variant transition-all hover:shadow-lg group">
+                    <div class="service-icon w-14 h-14 md:w-16 md:h-16 bg-tertiary-fixed rounded-xl flex items-center justify-center text-tertiary mb-4 md:mb-stack-md transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl">inventory_2</span>
                     </div>
-                    <h3 class="font-title-lg text-title-lg mb-stack-md">Supports Publicitaires</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Cartes de visite, flyers, brochures et objets promotionnels pour votre quotidien.</p>
-                    <ul class="space-y-2 text-on-surface-variant">
+                    <h3 class="font-title-lg text-lg md:text-title-lg mb-2 md:mb-stack-md">Supports Publicitaires</h3>
+                    <p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-6 md:mb-stack-lg">Cartes de visite, flyers, brochures et objets promotionnels pour votre quotidien.</p>
+                    <ul class="space-y-2 text-on-surface-variant text-sm md:text-base">
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">done</span> Carterie de Luxe</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">done</span> Goodies Personnalisés</li>
                         <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">done</span> Catalogues Pro</li>
@@ -223,39 +227,39 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="py-section-padding bg-surface-container-lowest" id="portfolio">
+    <section class="py-16 md:py-section-padding bg-surface-container-lowest" id="portfolio">
         <div class="max-w-container-max mx-auto px-gutter">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-stack-md">
-                <div class="space-y-stack-sm">
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Notre Portfolio</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Découvrez nos dernières réalisations pour des clients de prestige.</p>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-stack-lg gap-4">
+                <div class="space-y-2 md:space-y-stack-sm">
+                    <h2 class="font-headline-lg text-3xl md:text-[40px] text-on-surface">Notre Portfolio</h2>
+                    <p class="font-body-md text-sm md:text-body-md text-on-surface-variant">Découvrez nos dernières réalisations pour des clients de prestige.</p>
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-[800px]">
-                <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-xl border border-outline-variant group h-64 md:h-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-[800px]">
+                <div class="sm:col-span-2 md:row-span-2 relative overflow-hidden rounded-xl border border-outline-variant group h-64 sm:h-80 md:h-auto">
                     <img alt="Gilet de travail de sécurité avec logo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDyBRrxkpZVfwpafBoPXBmgD_dLksevILh5hDKz65t9vu7ERpv5cMzaHsB-4FsHjuRdkS4luM3Efus9xGm_PbTsnoHGlqGk2a1_st18-GNp27fT3nt6hDMBYq8O7YiSoPhOvWLqIpAnRyx501Jmg_Phgu4NH-TcfRfeiR7L_D5A3-lnJGaSbz3qZFRP7LIi-JjF6Hgdo9AsLXYDJxdN2Rj7mAgdft_rn_YWygsAVw7tkFav8KIVQedH2QZmzGsXhx0DVo"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-lg">
-                        <span class="text-white/70 font-label-lg">Impression Textile</span>
-                        <h4 class="text-white font-headline-sm">Gilets de Sécurité pour ONG</h4>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-stack-lg">
+                        <span class="text-white/70 text-xs md:font-label-lg">Impression Textile</span>
+                        <h4 class="text-white text-lg md:font-headline-sm">Gilets de Sécurité pour ONG</h4>
                     </div>
                 </div>
-                <div class="md:col-span-2 relative overflow-hidden rounded-xl border border-outline-variant group h-64 md:h-auto">
+                <div class="sm:col-span-2 relative overflow-hidden rounded-xl border border-outline-variant group h-64 md:h-auto">
                     <img alt="T-shirts promotionnels orange en sérigraphie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDgVS41oj-delsoeD7wx43eNvWZTNmCPxLmY8i2A-HVXBJPpexGUu09L1NGJ-gFP9iwBHv74MxAukKGwOo2FiNNJzKJ_DNrmM4KqE4pRFF19a4KGqVOlcGN7PINmNbwz3hyim3VlFXs-F4IB5Pp3_Qkr13KRPi1SE0LjVk3h60xvQkc04prkV9eA5IOzm0iQtLM2EptVWp8p0_-QLumt0tx7DMPOkG0_DdIM1eEPfrg4_U-TGwk9KHGg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-lg">
-                        <span class="text-white/70 font-label-lg">Sérigraphie</span>
-                        <h4 class="text-white font-headline-sm">Promotion T-Shirt Orange</h4>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-stack-lg">
+                        <span class="text-white/70 text-xs md:font-label-lg">Sérigraphie</span>
+                        <h4 class="text-white text-lg md:font-headline-sm">Promotion T-Shirt Orange</h4>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-xl border border-outline-variant group h-64 md:h-auto">
                     <img alt="Détail de broderie de haute qualité sur polo blanc" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX2ormBmWSDIMpm1dv6_oxYGlTHtEjrd6FmD5jXIkQE-SDxlVbikVQvf3TCCxGwxI_fyuIONXcFxG9zGsC8G3r4naQjH2ClfyhukqJg8oEutmBiLYVn_ALqgwkph0BooPYlA1lbeci6qsBhI3XhPDNKK0GYNpzazmmKiksXtrmZ5aCryfue_NIA-bGvJZVTyyIsGqtaDTog6bJmjNfKdKXtGPA3YTZZ9YZ9CaSUTaN-LbqxmuVR0xzTQ"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h4 class="text-white font-title-lg">Broderie Logotée</h4>
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-xl border border-outline-variant group h-64 md:h-auto">
                     <img alt="Objets publicitaires personnalisés" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS1ibCFDsUZDR2UEHoyeWyifsX0VyoUKKAWB5TthV5HLzVGaVYm44re7q1PB88uA7fYc7-Lb9nJ8N1rJJlFQVAMRHapL4i2h7y2tawmCb_Xno5Ewfhvf5BKLn4AP5zlCjp2SZjWpbygaBney5k7wh1xUl8EdWr8bjBuJ2OkV-lI-uEewIAdo2Z1dgKFaBhpG4Y-0KIXcE1Lm10-DUxKDXaJ7eIGIiZletOp5qrh8P2zsSDa4HsTzgQMw"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-stack-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h4 class="text-white font-title-lg">Kit Identité Visuelle</h4>
                     </div>
                 </div>
@@ -264,30 +268,30 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-section-padding bg-surface-container-high relative" id="contact">
+    <section class="py-16 md:py-section-padding bg-surface-container-high relative" id="contact">
         <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-stack-lg">
                 <!-- Info et Adresses -->
-                <div class="space-y-stack-lg">
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Proximité & Réactivité</h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">Présents au cœur de Kinshasa, nous vous accueillons dans nos deux points de service pour discuter de vos projets et vous proposer des échantillons.</p>
+                <div class="space-y-8 lg:space-y-stack-lg">
+                    <h2 class="font-headline-lg text-3xl md:text-[40px] text-on-surface">Proximité & Réactivité</h2>
+                    <p class="font-body-lg text-base md:text-body-lg text-on-surface-variant">Présents au cœur de Kinshasa, nous vous accueillons dans nos deux points de service pour discuter de vos projets et vous proposer des échantillons.</p>
                     
-                    <div class="grid sm:grid-cols-2 gap-stack-md">
-                        <div class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant">
+                    <div class="grid sm:grid-cols-2 gap-4 md:gap-stack-md">
+                        <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant">
                             <div class="flex items-center gap-2 text-primary font-bold mb-2">
                                 <span class="material-symbols-outlined">location_on</span> ADRESSE 1
                             </div>
-                            <p class="text-on-surface-variant text-body-md">
+                            <p class="text-on-surface-variant text-sm md:text-body-md">
                                 Immeuble Botour Local 35,<br/>
                                 Kinshasa Gombe,<br/>
                                 Réf. côté Centre Médical Botour
                             </p>
                         </div>
-                        <div class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant">
+                        <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant">
                             <div class="flex items-center gap-2 text-secondary font-bold mb-2">
                                 <span class="material-symbols-outlined">location_on</span> ADRESSE 2
                             </div>
-                            <p class="text-on-surface-variant text-body-md">
+                            <p class="text-on-surface-variant text-sm md:text-body-md">
                                 Avenue Haut Commandement n°11,<br/>
                                 Immeuble la Volonté (de Werrason),<br/>
                                 Réf. Entre Afriland Banque et Mandela
@@ -295,32 +299,33 @@
                         </div>
                     </div>
                     
-                    <div class="bg-primary text-on-primary p-stack-lg rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="bg-primary text-on-primary p-6 md:p-stack-lg rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div>
-                            <h4 class="font-title-lg text-title-lg mb-1">Besoin d'aide immédiate ?</h4>
-                            <p class="opacity-90">Appelez nos experts dès maintenant.</p>
+                            <h4 class="font-title-lg text-lg md:text-title-lg mb-1">Besoin d'aide immédiate ?</h4>
+                            <p class="opacity-90 text-sm md:text-base">Appelez nos experts dès maintenant.</p>
                         </div>
-                        <a class="text-3xl font-bold hover:underline transition-all whitespace-nowrap" href="tel:+2430834989202">+243 083 498 9202</a>
+                        <!-- Break-all sur très petit mobile pour le numero de telephone -->
+                        <a class="text-2xl sm:text-3xl font-bold hover:underline transition-all sm:whitespace-nowrap" href="tel:+2430834989202">+243 083 498 9202</a>
                     </div>
                 </div>
 
                 <!-- Formulaire de contact -->
-                <div class="bg-surface-container-lowest p-stack-lg rounded-xl shadow-sm border border-outline-variant">
-                    <h3 class="font-headline-sm text-headline-sm mb-stack-md">Envoyer une demande</h3>
+                <div class="bg-surface-container-lowest p-6 md:p-stack-lg rounded-xl shadow-sm border border-outline-variant">
+                    <h3 class="font-headline-sm text-2xl md:text-headline-sm mb-6 md:mb-stack-md">Envoyer une demande</h3>
                     
                     <form id="contact-form" class="space-y-4">
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div class="space-y-1">
-                                <label class="font-label-lg text-label-lg text-on-surface-variant" for="nom">NOM COMPLET</label>
-                                <input id="nom" required class="w-full bg-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-2 focus:ring-secondary/50 outline-none transition-colors" placeholder=" votre nom.. " type="text"/>
+                                <label class="font-label-lg text-xs md:text-label-lg text-on-surface-variant" for="nom">NOM COMPLET</label>
+                                <input id="nom" required class="w-full bg-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-2 focus:ring-secondary/50 outline-none transition-colors" placeholder="Votre nom.." type="text"/>
                             </div>
                             <div class="space-y-1">
-                                <label class="font-label-lg text-label-lg text-on-surface-variant" for="tel">TÉLÉPHONE</label>
+                                <label class="font-label-lg text-xs md:text-label-lg text-on-surface-variant" for="tel">TÉLÉPHONE</label>
                                 <input id="tel" required class="w-full bg-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-2 focus:ring-secondary/50 outline-none transition-colors" placeholder="+243 ..." type="tel"/>
                             </div>
                         </div>
                         <div class="space-y-1">
-                            <label class="font-label-lg text-label-lg text-on-surface-variant" for="service">TYPE DE SERVICE</label>
+                            <label class="font-label-lg text-xs md:text-label-lg text-on-surface-variant" for="service">TYPE DE SERVICE</label>
                             <select id="service" class="w-full bg-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-2 focus:ring-secondary/50 outline-none transition-colors">
                                 <option>Impression Textile</option>
                                 <option>Grand Format</option>
@@ -329,7 +334,7 @@
                             </select>
                         </div>
                         <div class="space-y-1">
-                            <label class="font-label-lg text-label-lg text-on-surface-variant" for="message">MESSAGE / DÉTAILS</label>
+                            <label class="font-label-lg text-xs md:text-label-lg text-on-surface-variant" for="message">MESSAGE / DÉTAILS</label>
                             <textarea id="message" required class="w-full bg-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-2 focus:ring-secondary/50 outline-none transition-colors" placeholder="Décrivez votre projet..." rows="4"></textarea>
                         </div>
                         
@@ -338,7 +343,7 @@
                             Merci ! Votre message a bien été envoyé. Nous vous contacterons rapidement.
                         </div>
 
-                        <button class="w-full bg-secondary text-on-secondary py-4 rounded font-label-lg text-label-lg font-bold uppercase tracking-widest hover:bg-secondary-container transition-all" type="submit">
+                        <button class="w-full bg-secondary text-on-secondary py-3 md:py-4 rounded font-label-lg text-sm md:text-label-lg font-bold uppercase tracking-widest hover:bg-secondary-container transition-all" type="submit">
                             Envoyer le message
                         </button>
                     </form>
@@ -349,33 +354,33 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full py-section-padding px-gutter flex flex-col items-center gap-stack-lg bg-surface-container-highest">
-    <div class="w-full max-w-container-max flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-lg">
-        <div class="space-y-2">
+<footer class="w-full py-12 md:py-section-padding px-gutter flex flex-col items-center gap-8 md:gap-stack-lg bg-surface-container-highest">
+    <div class="w-full max-w-container-max flex flex-col md:flex-row justify-between items-start gap-10 md:gap-stack-lg">
+        <div class="space-y-4">
             <div class="flex items-center gap-4">
                 <img alt="Logo GRADEL PRINT" class="h-10 w-auto opacity-80 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ENiZthg4ONgV3Ig9zwJhuFcGv2mk2Fvjtm_2gWjF8W3tyxSZQStv4cVp4O-U-Rpa8a35I67eGyiyH2LJxAcieYbcBzHQJJQdvIxRKTlrIjP_orMnrwXTuupFxCKmceq9ChTKsa8l93IM3WVX70T83-ifimS-R_C_wH8DoXO1DictBWFaHS0fFjY77gE-um8DghMn4SfeZ5f_GP4gdVOGzryKAz9XvwdizML5HT-IWwN7jMc_i7m0VA3ZhlVzyQh07KE"/>
-                <span class="font-headline-sm text-headline-sm font-bold text-primary">GRADEL PRINT</span>
+                <span class="font-headline-sm text-xl md:text-headline-sm font-bold text-primary">GRADEL PRINT</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            <p class="font-body-md text-sm md:text-body-md text-on-surface-variant max-w-sm">
                 Votre partenaire de confiance pour une communication visuelle d'exception en République Démocratique du Congo.
             </p>
         </div>
-        <div class="grid grid-cols-2 gap-stack-lg">
-            <div class="flex flex-col gap-2">
-                <span class="font-label-lg text-label-lg text-on-surface font-bold">SERVICES</span>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Impression Textile</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Grand Format</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Supports Publicitaires</a>
+        <div class="grid grid-cols-2 gap-8 md:gap-stack-lg w-full md:w-auto">
+            <div class="flex flex-col gap-3">
+                <span class="font-label-lg text-xs md:text-label-lg text-on-surface font-bold">SERVICES</span>
+                <a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Impression Textile</a>
+                <a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Grand Format</a>
+                <a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#services">Supports Publicitaires</a>
             </div>
-            <div class="flex flex-col gap-2">
-                <span class="font-label-lg text-label-lg text-on-surface font-bold">INFO</span>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Mentions Légales</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">À Propos</a>
+            <div class="flex flex-col gap-3">
+                <span class="font-label-lg text-xs md:text-label-lg text-on-surface font-bold">INFO</span>
+                <a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Mentions Légales</a>
+                <a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">À Propos</a>
             </div>
         </div>
     </div>
-    <div class="w-full max-w-container-max border-t border-outline-variant pt-stack-md flex flex-col md:flex-row justify-between items-center gap-stack-md">
-        <p class="font-label-lg text-label-lg text-on-surface-variant">© 2024 Gradel Print. Tous droits réservés.</p>
+    <div class="w-full max-w-container-max border-t border-outline-variant pt-6 md:pt-stack-md flex flex-col md:flex-row justify-between items-center gap-4 md:gap-stack-md">
+        <p class="font-label-lg text-xs md:text-label-lg text-on-surface-variant text-center md:text-left">© 2024 Gradel Print. Tous droits réservés.</p>
         <div class="flex gap-4">
             <a class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-white border border-outline-variant transition-all" href="#">
                 <span class="material-symbols-outlined text-[20px]">share</span>
@@ -388,8 +393,8 @@
 </footer>
 
 <!-- Bouton d'appel flottant (FAB) -->
-<a class="fixed bottom-6 right-6 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-transform" href="tel:+2430834989202" aria-label="Appeler Gradel Print">
-    <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+<a class="fixed bottom-4 right-4 md:bottom-6 md:right-6 w-14 h-14 md:w-16 md:h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-transform" href="tel:+2430834989202" aria-label="Appeler Gradel Print">
+    <span class="material-symbols-outlined text-2xl md:text-3xl">phone_in_talk</span>
 </a>
 
 <!-- Scripts Interactifs -->
@@ -444,7 +449,7 @@
 
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
-        // Simulation d'un envoi au serveur (ici on affiche juste le message)
+        // Simulation d'un envoi au serveur
         successMsg.classList.remove('hidden');
         form.reset(); // Vide les champs du formulaire
         
